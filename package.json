@@ -19,6 +19,7 @@
     "express": "3.3.7",
     "hjs": "*",
     "less-middleware": "*",
-    "supervisor": "~0.5.5"
+    "supervisor": "~0.5.5",
+    "mongojs": "~0.7.17"
   }
 }

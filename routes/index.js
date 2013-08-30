@@ -1,4 +1,7 @@
 
+var mongojs = require('mongojs');
+var db = mongojs('masterofcoin', ['events']);
+
 /*
  * GET /
  */
@@ -12,5 +15,6 @@ exports.index = function(req, res){
  */
 
 exports.post = function(req, res) {
-	console.log(req.body);
+	db.events.insert(req.body);
+	res.send();
 };
