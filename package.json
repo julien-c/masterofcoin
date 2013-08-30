@@ -1,13 +1,24 @@
 {
-  "name": "application-name",
+  "name": "masterofcoin",
   "version": "0.0.1",
-  "private": true,
+  "description": "Turn Stripe Webhook events into Hipchat messages",
+  "homepage": "http://github.com/julien-c/masterofcoin",
+  "keywords": [
+    "stripe",
+    "hipchat"
+  ],
+  "author": "Julien Chaumond <chaumond@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/julien-c/masterofcoin.git"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "supervisor -e 'js|json|html' app"
   },
   "dependencies": {
     "express": "3.3.7",
     "hjs": "*",
-    "less-middleware": "*"
+    "less-middleware": "*",
+    "supervisor": "~0.5.5"
   }
 }
