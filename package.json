@@ -20,6 +20,7 @@
     "hjs": "*",
     "less-middleware": "*",
     "supervisor": "~0.5.5",
-    "mongojs": "~0.7.17"
+    "mongojs": "~0.7.17",
+    "highlight.js": "~7.3.0"
   }
 }

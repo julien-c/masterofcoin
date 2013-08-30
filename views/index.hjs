@@ -2,11 +2,14 @@
 <html>
 <head>
 	<title>{{ title }}</title>
-	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" href="/stylesheets/highlight.js/default.css">
+	<link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 <body>
-	{{#events}}
-		<div>{{{ . }}}</div>
-	{{/events}}
+	{{#items}}
+		<div>
+			<pre><code>{{{ . }}}</code></pre>
+		</div>
+	{{/items}}
 </body>
 </html>
