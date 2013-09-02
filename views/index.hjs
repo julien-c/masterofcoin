@@ -6,10 +6,11 @@
 	<link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 <body>
-	{{#items}}
+	{{#events}}
 		<div>
-			<pre><code>{{{ . }}}</code></pre>
+			<h3>{{ date }}</h3>
+			<pre><code>{{{ pretty }}}</code></pre>
 		</div>
-	{{/items}}
+	{{/events}}
 </body>
 </html>

@@ -23,12 +23,14 @@ var hipchat = new Hipchat(nconf.get('hipchat'));
 
 exports.index = function(req, res) {
 	db.events.find().limit(20).sort({_id:-1}, function(err, events) {
-		items = events.map(function(event) {
+		events.forEach(function(event) {
 			var json = JSON.stringify(event, null, 4);
-			return hljs.highlight('json', json).value;
+			event.pretty = hljs.highlight('json', json).value;
+			
+			event.date = event._id.getTimestamp();
 		});
 		
-		res.render('index', {title: 'Master of Coin', items: items});
+		res.render('index', {title: 'Master of Coin', events: events});
 	});
 };
 
