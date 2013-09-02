@@ -1,7 +1,7 @@
 {
   "name": "masterofcoin",
   "version": "0.0.1",
-  "description": "Store Stripe Webhook events into MongoDB and send Hipchat notifications",
+  "description": "Store Stripe Webhook events into MongoDB, send Hipchat notifications, and display them using Server-Sent Events.",
   "homepage": "http://github.com/julien-c/masterofcoin",
   "keywords": [
     "stripe",

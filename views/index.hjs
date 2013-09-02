@@ -12,5 +12,8 @@
 			<pre><code>{{{ pretty }}}</code></pre>
 		</div>
 	{{/events}}
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="/javascripts/stream.js"></script>
 </body>
 </html>
