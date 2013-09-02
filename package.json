@@ -1,11 +1,13 @@
 {
   "name": "masterofcoin",
   "version": "0.0.1",
-  "description": "Turn Stripe Webhook events into Hipchat messages",
+  "description": "Store Stripe Webhook events into MongoDB and send Hipchat notifications",
   "homepage": "http://github.com/julien-c/masterofcoin",
   "keywords": [
     "stripe",
-    "hipchat"
+    "hipchat",
+    "mongodb",
+    "mongo"
   ],
   "author": "Julien Chaumond <chaumond@gmail.com>",
   "repository": {
@@ -22,6 +24,7 @@
     "supervisor": "~0.5.5",
     "mongojs": "~0.7.17",
     "highlight.js": "~7.3.0",
-    "node-hipchat": "~0.2.0"
+    "node-hipchat": "~0.2.0",
+    "nconf": "~0.6.7"
   }
 }

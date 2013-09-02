@@ -3,6 +3,9 @@ var mongojs = require('mongojs');
 var db = mongojs('masterofcoin', ['events']);
 
 var hljs = require('highlight.js');
+var Hipchat = require('node-hipchat');
+
+var hipchat = new Hipchat();
 
 /*
  * GET /
