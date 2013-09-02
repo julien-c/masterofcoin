@@ -1,11 +1,4 @@
 /**
- * Config
- */
-
-var nconf = require('nconf');
-nconf.file('config.json');
-
-/**
  * Module dependencies.
  */
 
