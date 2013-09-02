@@ -13,7 +13,7 @@
     "url": "git://github.com/julien-c/masterofcoin.git"
   },
   "scripts": {
-    "start": "supervisor -e 'js|json|html' app"
+    "start": "supervisor -e 'js|json|hjs' app"
   },
   "dependencies": {
     "express": "3.3.7",
@@ -21,6 +21,7 @@
     "less-middleware": "*",
     "supervisor": "~0.5.5",
     "mongojs": "~0.7.17",
-    "highlight.js": "~7.3.0"
+    "highlight.js": "~7.3.0",
+    "node-hipchat": "~0.2.0"
   }
 }

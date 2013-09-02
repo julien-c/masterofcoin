@@ -25,5 +25,6 @@ exports.index = function(req, res) {
 
 exports.post = function(req, res) {
 	db.events.insert(req.body);
+	
 	res.send();
 };
