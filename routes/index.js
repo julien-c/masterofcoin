@@ -36,13 +36,17 @@ var formatEvent = function(event) {
  */
 
 exports.post = function(req, res) {
-	db.events.insert(req.body);
+	var e = req.body;
+	db.events.insert(e);
 	
 	// Send to Hipchat:
-	var room = (req.body.livemode) ? 'Pulse' : 'Pulse-dev';
-	hipchat.postMessage({room: room, from: 'Stripe', message: req.body.type, color: 'purple', notify: 1});
+	var room = (e.livemode) ? 'Pulse' : 'Pulse-dev';
+	var message = (e.type === 'charge.succeeded') 
+		? [e.type, e.data.object.currency + e.data.object.amount.toString(), e.data.object.metadata.slug].join(' - ') 
+		: e.type;
+	hipchat.postMessage({room: room, from: 'Stripe', message: message, color: 'purple', notify: 1});
 	
-	var event = formatEvent(req.body);
+	var event = formatEvent(e);
 	openConnections.forEach(function(resp) {
 		var d = new Date();
 		resp.write('id: ' + d.getMilliseconds() + '\n');
